@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="components/platform/platform.js"></script>
+	<link rel="import" href="components/font-roboto/roboto.html">
+	<link rel="import" href="components/core-drawer-panel/core-drawer-panel.html">
+	<link rel="import" href="components/core-icon/core-icon.html">
+	<link rel="import" href="components/core-icons/core-icons.html">
+	<link rel="import" href="components/core-iconset/core-iconset.html">
+	<link rel="import" href="components/core-iconset-svg/core-iconset-svg.html">
+	<link rel="import" href="components/core-layout/core-layout.html">
+	<link rel="import" href="components/core-menu/core-menu.html">
+	<link rel="import" href="components/core-overlay/core-overlay.html">
+	<link rel="import" href="components/core-pages/core-pages.html">
+	<link rel="import" href="components/core-selector/core-selector.html">
+	<link rel="import" href="components/core-selection/core-selection.html">
+	<link rel="import" href="components/core-scaffold/core-scaffold.html">
+	<link rel="import" href="components/core-tooltip/core-tooltip.html">
+	<link rel="import" href="components/core-transition/core-transition.html">
+	<link rel="import" href="components/paper-button/paper-button.html">
+	<link rel="import" href="components/paper-focusable/paper-focusable.html">
+	<link rel="import" href="components/paper-ripple/paper-ripple.html">
+	<link rel="import" href="components/paper-shadow/paper-shadow.html">
+	<link rel="import" href="components/paper-tabs/paper-tabs.html">
+	<link rel="import" href="components/paper-dialog/paper-dialog.html">
+
+	<title>Web Starter Kit</title>
+
+	<!-- Add to homescreen for Chrome on Android -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="icon" sizes="196x196" href="images/touch/chrome-touch-icon-196x196.png">
+
+	<!-- Add to homescreen for Safari on iOS -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+
+	<!-- Tile icon for Win8 (144x144 + tile color) -->
+	<meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+	<meta name="msapplication-TileColor" content="#3372DF">
+
+	<!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+		<!--
+		<link rel="canonical" href="http://www.example.com/">
+	-->
+
+	<!-- build:css styles/components/main.min.css -->
+	<link rel="stylesheet" href="styles/h5bp.css">
+	<link rel="stylesheet" href="styles/components/components.css">
+	<link rel="stylesheet" href="styles/main.css">
+	<!-- endbuild -->
+</head>
+<body touch-action="auto">
+	<header class="app-bar promote-layer">
+		<div class="app-bar-container">
+			<button class="menu"><img src="images/hamburger.svg" alt="Menu"></button>
+			<h1 class="logo">Developing Developer Devloping Developments</h1>
+			<section class="app-bar-actions">
+				<paper-button id="social-media" >yeah</paper-button>
+			</section>
+		</div>
+	</header>
+
+<!-- 	<nav class="navdrawer-container promote-layer">
+		<h4>Navigation</h4>
+		<ul>
+			<li><a href="#hello">Hello</a></li>
+			<li><a href="#get-started">Get Started</a></li>
+			<li><a href="styleguide/index.html">Style Guide</a></li>
+		</ul>
+	</nav> -->
+
+	<main class="home">
+		<paper-tabs selected="0" id="modal" class="transparent-teal" role="tablist" transition="paper-dialog-transition-bottom">
+			<paper-tab role="tab" class="">Hello</paper-tab>
+			<paper-tab role="tab" class="core-selected" active="">Get Started</paper-tab>
+			<paper-tab role="tab" onclick="window.location.pathname='/styleguide'" class="">Style Guide</paper-tab>
+		</paper-tabs>
+
+	<br>
+
+	<paper-button id="myButton" class="huge bg-color--red" toggle="paper-dialog" >Heyy</paper-button>
+
+	<div id="tri-column" horizontal justified layout>
+		<paper-button class="large">justified</paper-button>
+		<paper-button class="large">justified</paper-button>
+		<paper-button class="large">justified</paper-button>
+	</div>
+
+
+	<core-overlay>
+		<h2>Dialog</h2>
+		<input placeholder="say something..." autofocus>
+		<div>I agree with this wholeheartedly.</div>
+		<button core-overlay-toggle>OK</button>
+	</core-overlay>
+
+	<div class="primary-content">
+		<paper-dialog heading="Title for dialog" >
+			<p>Lorem ipsum ....</p>
+			<p>Id qui scripta ...</p>
+			<paper-button label="More Info..." dismissive></paper-button>
+			<paper-button label="Decline" affirmative></paper-button>
+			<paper-button label="Accept" affirmative autofocus></paper-button>
+		</paper-dialog>
+
+		<p>Welcome to Web Starter Kit.</p>
+		<h2 id="get-started">Get Started.</h2>
+		<p>Read how to <a href="http://developers.google.com/web/starter-kit">Get Started</a> or check out the <a href="styleguide/index.html">Style Guide</a>.</p>
+	</div>
+</main>
+
+<!-- build:js scripts/main.min.js -->
+<script src="scripts/main.js"></script>
+<!-- endbuild -->
+
+<style>
+	#myButton {
+		background: #3372df;
+		border-radius: 0;
+		color: #fff;
+		display: block;
+		padding: 0;
+		text-align: right;
+	}
+
+	#tri-column {
+		margin: 10px auto;
+		border: 2px solid #09829a;
+	}
+
+	#tri-column paper-button {
+		color: #2c8566;
+		border: 2px solid #0f9d58;
+		/*border-radius: 100%;*/
+		margin: 10px auto;
+		padding: 0;
+	}
+
+	.transparent-teal paper-tab {
+	}
+
+</style>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-XXXXX-X');
+	ga('send', 'pageview');
+</script>
+<!-- Built with love using Web Starter Kit -->
+</body>
+</html>

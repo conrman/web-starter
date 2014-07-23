@@ -1,0 +1,155 @@
+/**
+*
+* Helper
+*
+**/
+
+
+.clear {
+  &::before,
+  &::after {
+    content:"";
+    display:table;
+  }
+  &::after {
+    clear:both;
+  }
+}
+
+
+/*==========  COLORS  ==========*/
+
+.color--blue { color: $colorBlue; }
+.color--red { color: $colorRed; }
+.color--green { color: $colorGreen; }
+.color--yellow { color: $colorYellow; }
+.color--blue-secondary { color: $colorBlueSecondary; }
+.color--red-secondary { color: $colorRedSecondary; }
+.color--green-secondary { color: $colorGreenSecondary; }
+.color--yellow-secondary { color: $colorYellowSecondary; }
+
+.color--gray-background { color: $colorGrayBackground; }
+.color--gray-keyline { color: $colorGrayKeyline; }
+.color--gray { color: $colorGray; }
+.color--gray-dark { color: $colorGrayDark; }
+
+.color--text { color: $colorText; }
+.color--highlight { color: $colorHighlight; }
+.color--warning { color: $colorWarning; }
+.color--danger { color: $colorDanger; }
+.color--muted { color: $colorMuted; }
+
+.color--remember { color: $colorRemember; }
+.color--learning { color: $colorLearning; }
+
+.color--layouts { color: $colorLayouts; }
+.color--user { color: $colorUser; }
+.color--media { color: $colorMedia; }
+.color--performance { color: $colorPerformance; }
+.color--layouts-secondary { color: $colorLayoutsSecondary; }
+.color--user-secondary { color: $colorUserSecondary; }
+.color--media-secondary { color: $colorMediaSecondary; }
+.color--performance-secondary { color: $colorPerformanceSecondary; }
+
+
+.bg-color--blue { background-color: $colorBlue; }
+.bg-color--red { background-color: $colorRed; }
+.bg-color--green { background-color: $colorGreen; }
+.bg-color--yellow { background-color: $colorYellow; }
+.bg-color--blue-secondary { background-color: $colorBlueSecondary; }
+.bg-color--red-secondary { background-color: $colorRedSecondary; }
+.bg-color--green-secondary { background-color: $colorGreenSecondary; }
+.bg-color--yellow-secondary { background-color: $colorYellowSecondary; }
+
+.bg-color--gray-background { background-color: $colorGrayBackground; }
+.bg-color--gray-keyline { background-color: $colorGrayKeyline; }
+.bg-color--gray { background-color: $colorGray; }
+.bg-color--gray-dark { background-color: $colorGrayDark; }
+
+.bg-color--text { background-color: $colorText; }
+.bg-color--highlight { background-color: $colorHighlight; }
+.bg-color--warning { background-color: $colorWarning; }
+.bg-color--danger { background-color: $colorDanger; }
+.bg-color--muted { background-color: $colorMuted; }
+
+.bg-color--remember { background-color: $colorRemember; }
+.bg-color--learning { background-color: $colorLearning; }
+
+.bg-color--layouts { background-color: $colorLayouts; }
+.bg-color--user { background-color: $colorUser; }
+.bg-color--media { background-color: $colorMedia; }
+.bg-color--performance { background-color: $colorPerformance; }
+.bg-color--layouts-secondary { background-color: $colorLayoutsSecondary; }
+.bg-color--user-secondary { background-color: $colorUserSecondary; }
+.bg-color--media-secondary { background-color: $colorMediaSecondary; }
+.bg-color--performance-secondary { background-color: $colorPerformanceSecondary; }
+
+
+
+/*==========  TEXT DIVIDER  ==========*/
+
+.text-divider {
+  position: relative;
+  margin-bottom: $lineHeight;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 40%;
+    height: 1px;
+    box-shadow: 0 1px 0 0 $colorGrayKeyline;
+    left: 30%;
+    bottom: -$lineHeight/2;
+  }
+
+  &.xlarge {
+    margin-bottom: $lineHeight*2;
+
+    &::after {
+      bottom: -($lineHeight*2)/2;
+    }
+  }
+
+  &.xxlarge {
+    margin-bottom: $lineHeight*3;
+
+    &::after {
+      bottom: -($lineHeight*3)/2;
+    }
+  }
+
+  &.huge {
+    margin-bottom: $lineHeight*3;
+
+    &::after {
+      bottom: -($lineHeight*3)/2;
+    }
+  }
+}
+
+
+/*==========  GENERIC  ==========*/
+.centered {
+  text-align: center;
+}
+
+
+/*==========  TAG  ==========*/
+.tag {
+  @include type--small;
+  font-family: $fontHighlight;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+
+  &:hover {
+    color: $colorGrayDark;
+  }
+
+  &::before {
+    content: "# ";
+    display: inline-block;
+  }
+}
